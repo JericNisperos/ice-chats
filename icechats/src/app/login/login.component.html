@@ -1,59 +1,160 @@
 <body class="mx-auto">
-    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
-      <main role="main" class="inner cover">
-        <div class="container px-4">
-          <div class="row gx-4 text-center">
-            <div class="col-md-12">
-              <h2 [@float] class="title-text-bar">Ice Chats</h2>
-              <div style="margin-top: 5%"></div>
-            </div>
+  <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+    <main role="main" class="inner cover">
+      <div class="container px-4">
+        <div class="row gx-4 text-center">
+          <div class="col-md-12">
+            <h2 [@float] class="title-text-bar">Ice Chats</h2>
+            <div style="margin-top: 5%"></div>
           </div>
-          <!-- Next Row -->
-          <div class="row gx-4 justify-content-center" [@floatonload]>
-            <!-- Contains all about -->
-            <div class="col-md-6 mb-2">
-              <div class="p-3 bordered" [@floatonload2]>
-                <div class="about-content">
-                  <h6 class="codex-color5 big-name text-center">Login</h6>
-                  <h6 class="codex-colorwhite">
-                    <div class="col-md-12">
-                        <h6 class="content-label">
-                            Username:
-                        </h6>
-                        <div class="text-center">
-                            <input type="text" placeholder="Enter Username" name="uname" required class="content-input text-center">
-                        </div>
-                        <h6 class="content-label">
-                            Password:
-                        </h6>
-                        <div class="text-center">
-                            <input type="password" placeholder="Enter Password" name="psw" required class="content-input text-center" ng-model="myInput" ng-change="checkForEmpty()">
-                            <p *ngIf="isEmpty" >Password is required.</p>
-                        </div>
-                        <div style="margin-top:10%;">
-                        </div>
-                        <div class="text-center">
-                            <button type="submit" class="login-button" ng-change="checkForEmpty()">Login</button>
-                        </div>
-                        <div class="row">
-                        <div class="col-md-6 text-center">
-                            <label>
-                            <input type="checkbox" checked="checked" name="remember"> Remember me
-                            </label>
-                        </div>
-                        <div class="col-md-6 text-center">
-                            <a>Forgot Password?</a>
-                        </div>
-                        </div>
+        </div>
+        <!-- Next Row -->
+        <div class="row gx-4 justify-content-center">
+          <!-- Contains all about -->
+          <div class="col-md-6 mb-2">
+            <div class="p-3 bordered" [@floatonload2]>
+              <div *ngIf="loginDiv" class="about-content">
+                <h6 class="codex-color5 big-name text-center">Login</h6>
+                <h6 class="codex-colorwhite">
+                  <div class="col-md-12">
+                    <h6 class="content-label">Username:</h6>
+                    <div class="text-center">
+                      <input
+                        type="text"
+                        placeholder="Enter Username"
+                        name="uname"
+                        required
+                        class="content-input text-center"
+                      />
+                    </div>
+                    <h6 class="content-label">Password:</h6>
+                    <div class="text-center">
+                      <input
+                        type="password"
+                        placeholder="Enter Password"
+                        name="psw"
+                        required
+                        class="content-input text-center"
+                        ng-model="myInput"
+                        ng-change="checkForEmpty()"
+                      />
+                      <p *ngIf="isEmpty">Password is required.</p>
+                    </div>
+                    <div style="margin-top: 10%"></div>
+                    <div class="text-center">
+                      <button
+                        type="submit"
+                        class="login-button"
+                        ng-change="checkForEmpty()"
+                      >
+                        Login
+                      </button>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6 text-center">
+                        <label>
+                          <input
+                            type="checkbox"
+                            checked="checked"
+                            name="remember"
+                          />
+                          Remember me
+                        </label>
+                      </div>
+                      <div class="col-md-6 text-center">
+                        <a class="text-link">Forgot Password?</a>
+                      </div>
+                    </div>
+                    <div style="margin-top: 10%"></div>
+                    <div class="row">
+                      <div class="col-md-12 text-center">
+                          Don't have an account yet? <a class="text-link" (click)="testCommand()">Sign Up!</a>
+                      </div>
                     </div>
 
-                  </h6>
-                </div>
+
+                  </div>
+                </h6>
+              </div>
+
+
+              <div *ngIf="!loginDiv" class="about-content">
+                <h6 class="codex-color5 big-name text-center">Sign Up</h6>
+                <h6 class="codex-colorwhite">
+                  <div class="col-md-12">
+                    <h6 class="content-label">Username:</h6>
+                    <div class="text-center">
+                      <input
+                        type="text"
+                        placeholder="Enter Username"
+                        name="uname"
+                        required
+                        class="content-input text-center"
+                      />
+                    </div>
+                    <h6 class="content-label">Email:</h6>
+                    <div class="text-center">
+                      <input
+                        type="email"
+                        placeholder="Enter Email Address"
+                        name="email"
+                        required
+                        class="content-input text-center"
+                      />
+                    </div>
+
+                    <h6 class="content-label">Password:</h6>
+                    <div class="text-center">
+                      <input
+                        type="password"
+                        placeholder="Enter Password"
+                        name="psw"
+                        required
+                        class="content-input text-center"
+                        ng-model="myInput"
+                        ng-change="checkForEmpty()"
+                      />
+                      <p *ngIf="isEmpty">Password is required.</p>
+                    </div>
+
+                    <h6 class="content-label">Confirm password:</h6>
+                    <div class="text-center">
+                      <input
+                        type="password"
+                        placeholder="Enter Password"
+                        name="pswc"
+                        required
+                        class="content-input text-center"
+                        ng-model="myInput"
+                        ng-change="checkForEmpty()"
+                      />
+                      <p *ngIf="isEmpty">Password is required.</p>
+                    </div>
+                    <div style="margin-top: 5%"></div>
+                    <div class="text-center">
+                      <button
+                        type="submit"
+                        class="login-button"
+                        ng-change="checkForEmpty()"
+                      >
+                        Sign Up
+                      </button>
+                    </div>
+                    <div style="margin-top: 10%"></div>
+                    <div class="row">
+                      <div class="col-md-12 text-center">
+                          Already have an account? <a class="text-link" (click)="testCommand()">Login!</a>
+                      </div>
+                    </div>
+
+
+                  </div>
+                </h6>
               </div>
             </div>
           </div>
         </div>
-      </main>
-    </div>
-  </body>
-  
+      </div>
+    </main>
+  </div>
+</body>

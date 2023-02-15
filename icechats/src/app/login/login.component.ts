@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { float, floatAnim1, floatsm, floatsm1, floatsm2, floatsm3 } from '../onload-animation';
 import { trigger, state, transition, style, animate } from '@angular/animations';
 import { floatonload1, floatonload2, floatonload3 } from '../float.animation';
+import { animation } from '@angular/animations';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +17,8 @@ import { floatonload1, floatonload2, floatonload3 } from '../float.animation';
 export class LoginComponent {
   myInput!: string;
   isEmpty: boolean = false;
-
+  loginDiv: boolean = true;
+  
   checkForEmpty() {
     if (!this.myInput) {
       this.isEmpty = true;
@@ -24,4 +26,11 @@ export class LoginComponent {
       this.isEmpty = false;
     }
   }
+
+  testCommand() {
+    this.loginDiv = !this.loginDiv;
+    // console.log(this.loginDiv);
+  }
+
+  
 }
