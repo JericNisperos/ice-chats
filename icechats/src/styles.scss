@@ -1,0 +1,128 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+	position: relative;
+	margin: auto;
+	background: #0b0C10;
+	// background: rgb(69,162,158);
+	//background: radial-gradient(circle, rgba(69,162,158,1) 0%, rgba(11,12,16,1) 100%);
+
+	// background-color: #66FCF1;
+	perspective: 500px;
+    color:aliceblue ;
+	scrollbar-color: dark;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	font-family: 'DM Sans', sans-serif;
+	// padding-top: -50px;
+}
+
+html, body { height: 100%; }
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color:rgb(41, 41, 41);
+    -webkit-box-shadow: inset 0 0 6px rgba(53, 53, 53, 0.7);
+}
+
+.navbar-brand {
+	color: #66FCF1;
+	font-family: 'Share Tech', sans-serif;
+}
+
+.navbar-brand:hover {
+	color: #66FCF1;
+}
+
+
+.nav-link {
+	color: #C5C6C7;
+	border-radius: 25px;
+}
+
+.nav-link:hover {
+		color: #66FCF1	; 
+	}
+	@media (max-width: 991px) {
+	.navbar .navbar-nav {
+		display: inline-block;
+		float: none;
+		vertical-align: top;
+	  }
+	  
+	  .navbar .navbar-collapse {
+		text-align: center;
+	  }
+	}
+
+.title-text-bar {
+	font-size: 300%;
+	font-weight: 900;
+}
+
+.codex-colorwhite {
+	color: white;
+}
+
+.codex-color5 {
+	color: #66FCF1;
+}
+
+.codex-color4 {
+	color: #45A29E;
+}
+
+.codex-color3 {
+	color: #C5C6C7;
+}
+
+.codex-color2 {
+	color: #1F2833;
+}
+
+.codex-color1 {
+	color: #0b0C10;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media print {
+	.noprint {
+	   visibility: hidden;
+	}
+
+	.print-addspace-20 {
+		margin-top: 21%;
+	}
+
+	.print-addspace-50 {
+		margin-top: 52%;
+	}
+
+	body {
+		scrollbar-color: none;
+		overflow-x: hidden;
+		overflow-y: hidden;
+	}
+ }
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Dosis:wght@800&family=Share+Tech&family=Unbounded:wght@400;500&display=swap');
