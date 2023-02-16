@@ -97,6 +97,14 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/icechats",
+            "netlifyToken": "y7cgR-vbr0P6tFOYi6ISKeTyZ5t0chSVKkfHsuKy4RY",
+            "siteId": "b1982245-919b-4bc3-b6d9-6e587702e225"
+          }
         }
       }
     }
